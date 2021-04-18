@@ -3,6 +3,8 @@
 @import "./utils/mixins";
 @import "./utils/reset";
 @import "./utils/base";
+@import "../assets/owlcarousel/src/scss/owl.carousel.scss";
+@import "../assets/owlcarousel/src/scss/owl.theme.default.scss";
 //MAIN
 @import "./main/header";
 @import "./main/main";

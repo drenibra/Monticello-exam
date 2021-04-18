@@ -1,7 +1,6 @@
 //silence-is-golden
 
 body {
-    background-color: rgb(105, 14, 223);
     font-family: $openSans;
 }
 
@@ -19,12 +18,17 @@ body {
     font-weight: 400;
     font-size: 0.87rem;
     color: white;
+    position: absolute;
+    top: 53px;
+    right: 50%;
+    transform: translateX(50%);
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     &__links {
+        padding: 0 50px;
         text-transform: uppercase;
         display: flex;
         justify-content: center;
@@ -32,6 +36,10 @@ body {
             display: flex;
             align-items: center;
             padding: 0 40px;
+            &:first-of-type {
+                width: 164px;
+                padding: 0 20px 0 40px;
+            }
             span {
                 background-color: white;
                 width: 9px;
@@ -42,7 +50,95 @@ body {
             }
         }
     }
-    &__logo--links img {
-        padding: 0 10px;
+    &__logo--links {
+        display: flex;
+        img {
+            padding: 0 10px;
+        }
+    }
+    @include max-big-tablet {
+        &__links, &__logo--links{
+            display: none;
+        }
+    }
+}
+
+/* CAROUSEL SECTION */
+
+.hero-section--carousel {
+    background: linear-gradient(217deg, rgb(126 90 255 / 81%),rgb(82 183 255) 70.71%);
+    height: 100vh;
+    .owl-carousel {
+        &, .slider-image img {
+            height: 100vh;
+            object-fit: cover;
+        }
+        .item:not(#first) {
+            opacity: 0.07;
+        }
+        .owl-nav {
+            display: none;
+        }
+        .owl-stage-outer:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+    }
+    .owl-dots {
+        position: absolute;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        top: 50%;
+        transform: translateY(-50%);
+        span {
+            margin: 20px 0 !important;
+        }
+    }
+    &__title {
+        font-family: $montserrat;
+        font-style: normal;
+        color: white;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        h1 {
+            font-weight: bold;
+            font-size: 5rem;
+            letter-spacing: 0.1em;
+        }
+        h3 {
+            font-weight: normal;
+            font-size: 1.12rem;
+            letter-spacing: 0.3em;
+        }
+    }
+}
+
+.owl-dots {
+    button {
+        &:focus {
+            outline: none;
+        }
+    }
+    .owl-dot {
+        span {
+            background: none !important;
+            border: 1px solid white !important;
+            border-collapse: separate !important;
+            perspective: 1px !important;
+            border-radius: 30px !important;
+            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.294);
+        }
+        &.active span {
+            background-color: white !important;
+        }
     }
 }

@@ -1,1 +1,23 @@
 //silence-is-golden
+@mixin mobile {
+    @media (max-width: 767px){
+        @content;
+    }
+}
+  
+@mixin max-big-tablet {
+    @media (max-width: 1190px){
+        @content;
+    }
+}
+
+@mixin small-tablet {
+    @media (min-width: 768px) and (max-width: 990px){
+        @content;
+    }
+}
+@mixin big-tablet {
+    @media (min-width: 991px) and (max-width: 1090px){
+        @content;
+    }
+}

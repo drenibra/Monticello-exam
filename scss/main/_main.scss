@@ -1,0 +1,48 @@
+//silence-is-golden
+
+body {
+    background-color: rgb(105, 14, 223);
+    font-family: $openSans;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* NAVBAR */
+
+.navigation-bar {
+    font-family: $sourceSans;
+    font-weight: 400;
+    font-size: 0.87rem;
+    color: white;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__links {
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        li {
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            span {
+                background-color: white;
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 14px;
+            }
+        }
+    }
+    &__logo--links img {
+        padding: 0 10px;
+    }
+}

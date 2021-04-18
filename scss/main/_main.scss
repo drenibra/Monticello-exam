@@ -52,7 +52,9 @@ hr {
                 padding: 0 20px 0 40px;
             }
             span {
-                background-color: white;
+                border: 1px solid white;
+                border-radius: 50%;
+                background-color: none;
                 width: 9px;
                 height: 9px;
                 border-radius: 50%;
@@ -213,9 +215,56 @@ hr {
          }
          .projects-section__project--right {
             width: 42%;
+            @include projects-responsive {
+                width: 100%;
+                padding: 20px;
+            }
          }
+         @include max-small-tablet {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            a {
+                margin: auto;
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+            .location {
+                margin: auto;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        }
       }
-   }
+      @include projects-responsive {
+          width: 100%;
+          flex-direction: column;
+          span {
+              display: none;
+          }
+      }
+      @include max-small-tablet {
+          &--right {
+              width: 100%;
+              a {
+                  margin: auto;
+                  margin-top: 40px;
+                  margin-bottom: 40px;
+              }
+              .location {
+                  margin: auto;
+                display: flex;
+                justify-content: center;
+              }
+          }
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+      }
    overflow: hidden;
 }
 
@@ -259,4 +308,13 @@ hr {
    color: black;
    background: white;
    border: 1px solid $projectsFontColor;
+}
+
+/* MAP SECTION */
+
+.maps-section {
+    height: 100vh;
+    #map {
+        height: 100%;
+    }
 }

@@ -29,7 +29,7 @@ $('#owl-two').owlCarousel({
       items:2,
       nav:false
     },
-    900:{
+    1130:{
       items:3,
       nav:true,
       loop:true

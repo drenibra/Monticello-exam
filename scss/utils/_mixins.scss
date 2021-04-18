@@ -21,3 +21,13 @@
         @content;
     }
 }
+@mixin responsive-carousel {
+    @media (max-width: 1120px) {
+        @content;
+    }
+}
+@mixin responsive-carousel_2 {
+    @media (max-width: 910px) {
+        @content;
+    }
+}

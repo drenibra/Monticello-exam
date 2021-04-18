@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
   <title>Monticello</title>
 </head>
 <body>
@@ -18,15 +18,15 @@
     <div class="container"> 
       <img src="assets/images/logo.svg" alt="logo">
       <ul class="navigation-bar__links">
-        <li><span></span>about us</li>
-        <li><span></span>projects</li>
-        <li><span></span>news</li>
-        <li><span></span>contact</li>
+        <a href="#"><li><span></span>about us</li></a>
+        <a href="#"><li><span></span>projects</li></a>
+        <a href="#"><li><span></span>news</li></a>
+        <a href="#"><li><span></span>contact</li></a>
       </ul>
       <div class="navigation-bar__logo--links">
-        <img src="assets/images/facebook-logo.svg" alt="facebook-logo">
-        <img src="assets/images/twitter-logo.svg" alt="twitter-logo">
-        <img src="assets/images/instagram-logo.svg" alt="insta-logo">
+        <a href="#"><img src="assets/images/facebook-logo.svg" alt="facebook-logo"></a>
+        <a href="#"><img src="assets/images/twitter-logo.svg" alt="twitter-logo"></a>
+        <a href="#"><img src="assets/images/instagram-logo.svg" alt="insta-logo"></a>
       </div>
     </div>
   </header>
@@ -106,6 +106,7 @@
     </section>
     <section class="news-section">
       <div class="container">
+        <hr>
         <h1 class="section-title">Latest news</h1>
       <div class="owl-carousel owl-theme" id="owl-two">
         <article class="news-section_article">
@@ -211,12 +212,68 @@
       </div>
     </div>
     </section>
+    <section class="gallery-section">
+      <div class="container">
+        <hr>
+        <h1 class="section-title">gallery</h1>
+        <div class="gallery-section__collage">
+          <img src="assets/images/gallery1.png" alt="picture">
+          <div class="four-pictures">
+            <div>
+              <img src="assets/images/gallery2.png" alt="picture">
+              <img src="assets/images/gallery3.png" alt="picture">
+            </div>
+            <div>
+              <img src="assets/images/gallery4.png" alt="picture">
+              <img src="assets/images/gallery5.png" alt="picture">
+            </div>
+          </div>
+        </div>
+        <a href="#" class="section-button">See more</a>
+      </div>
+    </section>
     <section class="maps-section">
       <div id="map"></div>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs6kz4vjgFFQ9Wj84dcAiDBQXZmRynDFg&callback=initMap"></script>
       <script src="assets/js/maps.js"></script>
     </section>
   </main>
+  <footer class="footer">
+    <div class="footer-subscribe">
+      <div class="footer-subscribe__box">
+        <hr>
+        <h1 class="section-title">get in touch</h1>
+        <div>
+          <ul class="footer-subscribe__box--info">
+            <li><img src="assets/images/pin.svg" alt="location"><p>91 Nolan Extensions Suite 670</p></li>
+            <li><img src="assets/images/call.svg" alt="phone"><p>+001 356-868-2454</p></li>
+            <li><img src="assets/images/inbox.svg" alt="inbox"><p>montichello@service.com</p></li>
+            <li><img src="assets/images/wall-clock.svg" alt="time"><p>From 07:05AM to 19:30PM</p></li>
+          </ul>
+          <div class="footer-subscribe__box--input">
+            <form action="#" name="subscribeForm" onsubmit="return validateForm()">
+              <input type="text" name="fName" placeholder="Full Name"></br>
+              <input type="text" name="email" placeholder="Email"></br>
+              <button value="submit">SUBMIT</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-container">
+        <div>
+          <img src="assets/images/logo.svg" alt="logo">
+          <p>Copyrights © 2020 Montichello</p>
+        </div>
+        <div class="footer-container__social">
+          <a href="#"><img src="assets/images/facebook-logo.svg" alt="facebook-logo"></a>
+          <a href="#"><img src="assets/images/twitter-logo.svg" alt="twitter-logo"></a>
+          <a href="#"><img src="assets/images/instagram-logo.svg" alt="insta-logo"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="assets/js/jquery.js"></script>
   <script src="assets/owlcarousel/dist/owl.carousel.min.js"></script>
   <script src="assets/js/carousel.js"></script>

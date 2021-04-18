@@ -43,3 +43,12 @@ $('.customNextBtn').click(function () {
 $('.customPreviousBtn').click(function () {
   $('#owl-two').trigger('prev.owl.carousel', [300]);
 });
+
+function validateForm() {
+  var x = document.forms["subscribeForm"]["fName"].value;
+  var y = document.forms["subscribeForm"]["email"].value;
+  if (x == "" || y == "") {
+    alert("Name and email must be filled out");
+    return false;
+  }
+}

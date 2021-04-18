@@ -1,7 +1,7 @@
 $('#owl-one').owlCarousel({
     loop:true,
     margin:0,
-    autoplay:false,
+    autoplay:true,
     autoplayTimeout:4000,
     nav:true,
     lazyLoad: true,
@@ -14,7 +14,7 @@ $('#owl-one').owlCarousel({
 
 $('#owl-two').owlCarousel({
   loop:true,
-  autoplay:false,
+  autoplay:true,
   autoplayTimeout:4000,
   margin: 30,
   lazyLoad: true,

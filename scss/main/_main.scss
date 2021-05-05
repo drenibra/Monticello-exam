@@ -24,6 +24,10 @@ hr {
 
 /* NAVBAR */
 
+.linkClicked {
+    background-color: white;
+}
+
 .navigation-bar {
     font-family: $sourceSans;
     font-weight: 400;
@@ -62,6 +66,9 @@ hr {
                 display: inline-block;
                 margin-right: 14px;
             }
+        }
+        li:hover {
+            cursor: pointer;
         }
     }
     &__logo--links {
@@ -137,7 +144,6 @@ hr {
             font-weight: bold;
             font-size: 5rem;
             letter-spacing: 0.1em;
-            
             @include max-small-tablet {
                 font-size: 2.5rem;
             }
@@ -189,6 +195,9 @@ hr {
      &__title {
          text-align: center;
          padding-bottom: 200px;
+         @include mobile {
+             padding-bottom: 40px;
+         }
      }
      &__project {
          display: flex;
@@ -388,7 +397,7 @@ hr {
         display: flex;
         img {
             margin: 5px;
-            @include max-small-tablet {
+            @include mobile {
                 width: 100%;
             }
         }
@@ -399,6 +408,7 @@ hr {
                 display: flex;
             }
             @include mobile {
+                width: 100%;
                 div {
                     flex-direction: column;
                     align-items: center;
@@ -414,6 +424,9 @@ hr {
         margin: auto;
         margin-top: 60px;
         margin-bottom: 140px;
+        @include mobile {
+            width: 100%;
+        }
     }
 }
 
@@ -431,17 +444,37 @@ hr {
         margin: 0 auto;
         display: flex;
         justify-content: space-evenly;
-        &__social img {
-            padding: 10px;
+        &__social {
+            img {
+                padding: 10px;
+            }
+            @include mobile {
+                padding-top: 20px;
+                margin-bottom: -100px;
+            }
         }
-    }
-    p {
-        padding-top: 40px;
-        font-family: $montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        color: #FFFFFF;
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__copyright {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            p {
+                padding-top: 40px;
+                font-family: $montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                color: #FFFFFF;
+                @include mobile {
+                    margin: 0 auto;
+                    position: absolute;
+                    bottom: 10px;
+                }
+            }
+        }
     }
     &-subscribe {
         margin-bottom: -400px;
@@ -450,6 +483,9 @@ hr {
 .footer-subscribe__box {
     hr {
         margin-top: 60px;
+    }
+    h1 {
+        text-align: center;
     }
     position: relative;
     bottom: 220px;
@@ -467,6 +503,13 @@ hr {
         @include mobile {
             flex-direction: column;
             align-items: center;
+            width: 90%;
+            padding: 0;
+            form, input {
+                width: 100%;
+                margin: 0 auto;
+                float: unset;
+            }
         }
     }
     p {
@@ -474,6 +517,9 @@ hr {
         color: black;
     }
     &--info {
+        @include mobile {
+            padding: 60px 0 20px;
+        }
         li {
             display: flex;
             align-items: center;
@@ -500,6 +546,7 @@ hr {
             padding: 10px;
             border: none;
             border-bottom: 1px solid rgb(207, 207, 207);
+            transition: 0.15s all ease-in-out;
             &:focus {
                 outline: none;
                 border-bottom: 1px solid $projectsFontColor;
@@ -512,6 +559,18 @@ hr {
             background: none;
             outline: none;
             border: 1px solid $projectsFontColor;
+            @include mobile {
+                width: 100%;
+                margin: 0 auto;
+                float: unset;
+                margin-top: 23px;
+            }
+            transition: 0.2s all ease-in-out;
+            &:hover {
+                cursor: pointer;
+                background-color: $projectsFontColor;
+                color: white;
+            }
         }
     }
     @include mobile {

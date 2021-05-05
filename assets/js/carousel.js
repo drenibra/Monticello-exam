@@ -52,3 +52,11 @@ function validateForm() {
     return false;
   }
 }
+
+$(document).ready(function() {
+  $('#item1').children('span').addClass('linkClicked');
+  $('.navbarListItem').click(function() {
+    $('.navbarListItem').children('span').removeClass('linkClicked');
+    $(this).children('span').addClass('linkClicked');
+  });
+});

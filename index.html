@@ -11,17 +11,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/owlcarousel/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/owlcarousel/dist/assets/owl.theme.default.min.css">
+  
   <title>Monticello</title>
 </head>
 <body>
+  <div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div class="hamburgerDiv"></div></div>
+    <div class="menu">
+      <div>
+        <div>
+          <ul>
+            <a href="#" class="hamburgerItem"><li>HOME</li></a>
+            <a href="#" class="hamburgerItem"><li>PROJECTS</li></a>
+            <a href="#" class="hamburgerItem"><li>NEWS</li></a>
+            <a href="#" class="hamburgerItem"><li>CONTACT</li></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
   <header class="navigation-bar">
-    <div class="container"> 
-      <img src="assets/images/logo.svg" alt="logo">
+    <div class="container">
+      <a href="#"><img src="assets/images/logo.svg" alt="logo"></a>
       <ul class="navigation-bar__links">
-        <a href="#"><li><span></span>about us</li></a>
-        <a href="#"><li><span></span>projects</li></a>
-        <a href="#"><li><span></span>news</li></a>
-        <a href="#"><li><span></span>contact</li></a>
+        <li class="navbarListItem" id="item1"><span></span><a href="#">about us</a></li>
+        <li class="navbarListItem" id="item2"><span></span><a href="#">projects</a></li>
+        <li class="navbarListItem" id="item3"><span></span><a href="#">news</a></li>
+        <li class="navbarListItem" id="item4"><span></span><a href="#">contact</a></li>
       </ul>
       <div class="navigation-bar__logo--links">
         <a href="#"><img src="assets/images/facebook-logo.svg" alt="facebook-logo"></a>
@@ -70,7 +89,6 @@
           </div>
         </div>
     </div>
-
     </section>
     <section class="projects-section">
       <div class="container">
@@ -275,7 +293,7 @@
     </div>
     <div class="container">
       <div class="footer-container">
-        <div>
+        <div class="footer-container__copyright">
           <img src="assets/images/logo.svg" alt="logo">
           <p>Copyrights © 2020 Montichello</p>
         </div>

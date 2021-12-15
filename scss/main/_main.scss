@@ -22,72 +22,11 @@ hr {
     border: 1px solid $projectsFontColor;
 }
 
-/* NAVBAR */
-
-.linkClicked {
-    background-color: white;
-}
-
-.navigation-bar {
-    font-family: $sourceSans;
-    font-weight: 400;
-    font-size: 0.87rem;
-    color: white;
-    position: absolute;
-    top: 53px;
-    right: 50%;
-    transform: translateX(50%);
-    z-index: 3;
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    &__links {
-        padding: 0 50px;
-        text-transform: uppercase;
-        display: flex;
-        justify-content: center;
-        li {
-            display: flex;
-            align-items: center;
-            padding: 0 40px;
-            &:first-of-type {
-                width: 164px;
-                padding: 0 20px 0 40px;
-            }
-            span {
-                border: 1px solid white;
-                border-radius: 50%;
-                background-color: none;
-                width: 9px;
-                height: 9px;
-                border-radius: 50%;
-                display: inline-block;
-                margin-right: 14px;
-            }
-        }
-        li:hover {
-            cursor: pointer;
-        }
-    }
-    &__logo--links {
-        display: flex;
-        img {
-            padding: 0 10px;
-        }
-    }
-    @include max-big-tablet {
-        &__links, &__logo--links{
-            display: none;
-        }
-    }
-}
-
 /* CAROUSEL SECTION */
 
 .hero-section--carousel {
     height: 100vh;
+    background: linear-gradient(217deg,rgb(126 90 255),#52b7ff 70.71%);
     .owl-carousel {
 		&:before {
 			content: "";
@@ -96,16 +35,15 @@ hr {
 			height: 100%;
 			left: 0;
 			top: 0;
-			background: linear-gradient(217deg,rgba(126,90,255,0.81),#52b7ff 70.71%);
+			background: url('../../dist/assets/images/hero-background.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
 			z-index: -2;
 			position: absolute;
 		}
-        &, .slider-image img {
+        .item {
             height: 100vh;
-            object-fit: cover;
-        }
-        .item:not(#first) img {
-            opacity: 0.07;
         }
         .owl-nav {
             display: none;
@@ -374,12 +312,15 @@ hr {
 }
 
 /* MAP SECTION */
-
+.active-load {
+    display: block !important;
+}
 .maps-section {
     height: 800px;
     #map {
         height: 100%;
         background-color: grey;
+        display: none;
     }
 }
 
@@ -427,153 +368,5 @@ hr {
         @include mobile {
             width: 100%;
         }
-    }
-}
-
-/* FOOTER */
-
-.footer {
-    position: relative;
-    background-image:linear-gradient(215deg, rgba(126, 90, 255, 0.8), rgba(85, 183, 255, 0.8)),
-    url('../../assets/images/footer-background.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    &-container {
-        padding: 200px 0;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-evenly;
-        &__social {
-            img {
-                padding: 10px;
-            }
-            @include mobile {
-                padding-top: 20px;
-                margin-bottom: -100px;
-            }
-        }
-        @include mobile {
-            flex-direction: column;
-            align-items: center;
-        }
-        &__copyright {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            p {
-                padding-top: 40px;
-                font-family: $montserrat;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 14px;
-                color: #FFFFFF;
-                @include mobile {
-                    margin: 0 auto;
-                    position: absolute;
-                    bottom: 10px;
-                }
-            }
-        }
-    }
-    &-subscribe {
-        margin-bottom: -400px;
-    }
-}
-.footer-subscribe__box {
-    hr {
-        margin-top: 60px;
-    }
-    h1 {
-        text-align: center;
-    }
-    position: relative;
-    bottom: 220px;
-    margin: auto;
-    max-width: 770px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-height: 450px;
-    background-color: white;
-    div {
-        display: flex;
-        padding-top: 45px;
-        margin-bottom: 150px;
-        @include mobile {
-            flex-direction: column;
-            align-items: center;
-            width: 90%;
-            padding: 0;
-            form, input {
-                width: 100%;
-                margin: 0 auto;
-                float: unset;
-            }
-        }
-    }
-    p {
-        padding-top: unset;
-        color: black;
-    }
-    &--info {
-        @include mobile {
-            padding: 60px 0 20px;
-        }
-        li {
-            display: flex;
-            align-items: center;
-            &:not(:first-of-type) {
-                padding: 20px 0;
-            } &:first-of-type {
-                padding-bottom: 20px;
-            }
-            img {
-                width: 15px;
-                height: 15px;
-                margin-right: 10px;
-            }
-        }
-        span {
-            font-size: 3em;
-        }
-    }
-    &--input {
-        padding-top: 0 !important;
-        padding-left: 50px;
-        input {
-            font-family: $montserrat;
-            padding: 10px;
-            border: none;
-            border-bottom: 1px solid rgb(207, 207, 207);
-            transition: 0.15s all ease-in-out;
-            &:focus {
-                outline: none;
-                border-bottom: 1px solid $projectsFontColor;
-            }
-        }
-        button {
-            float: right;
-            margin-top: 30px;
-            padding: 10px 20px;
-            background: none;
-            outline: none;
-            border: 1px solid $projectsFontColor;
-            @include mobile {
-                width: 100%;
-                margin: 0 auto;
-                float: unset;
-                margin-top: 23px;
-            }
-            transition: 0.2s all ease-in-out;
-            &:hover {
-                cursor: pointer;
-                background-color: $projectsFontColor;
-                color: white;
-            }
-        }
-    }
-    @include mobile {
-        max-height: 580px;
     }
 }

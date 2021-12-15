@@ -53,7 +53,7 @@ function validateForm() {
   }
 }
 
-$(document).ready(function() {
+$(document).ready(function() {  
   $('#item1').children('span').addClass('linkClicked');
   $('.navbarListItem').click(function() {
     $('.navbarListItem').children('span').removeClass('linkClicked');

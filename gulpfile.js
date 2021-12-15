@@ -23,4 +23,4 @@ function jsTask() {
 
 exports.jsTask = jsTask;
 exports.imgTask = imgTask;
-exports.default = parallel(imgTask, jsTask);
+exports.default = jsTask;

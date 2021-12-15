@@ -1,1 +1,59 @@
-//silence-is-golden
+.linkClicked {
+    background-color: white;
+}
+
+.navigation-bar {
+    font-family: $sourceSans;
+    font-weight: 400;
+    font-size: 0.87rem;
+    color: white;
+    position: absolute;
+    top: 53px;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 3;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__links {
+        padding: 0 50px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        li {
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            &:first-of-type {
+                width: 164px;
+                padding: 0 20px 0 40px;
+            }
+            span {
+                border: 1px solid white;
+                border-radius: 50%;
+                background-color: none;
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 14px;
+            }
+        }
+        li:hover {
+            cursor: pointer;
+        }
+    }
+    &__logo--links {
+        display: flex;
+        img {
+            padding: 0 10px;
+        }
+    }
+    @include max-big-tablet {
+        &__links, &__logo--links{
+            display: none;
+        }
+    }
+}
